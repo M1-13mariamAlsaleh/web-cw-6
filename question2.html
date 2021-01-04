@@ -6,22 +6,42 @@
     <link rel="stylesheet" href="styles.css" />
     <title>فردي أم زوجي؟ 🥴</title>
   </head>
-  <body>
+  <body style="background-color: cornsilk;border-radius: 30px;">
     <!-- السؤال الثاني -->
+   
     <h2 id="numberType"></h2>
     <div class="center">
-      <input
+      <!-- <input
         dir="rtl"
         type="text"
         placeholder="أدخل العدد"
         id="height"
         style="text-align: center; font-size: 1rem; margin: 0.4rem"
-      />
+      /> -->
+      <div style="background-color: blueviolet; border-radius: 20px;"><h1 id="m"></h1></div>
     </div>
     <div class="center">
-      <button onclick="">اختبر 🤓</button>
+      <button onclick="numbers()">اختبر 🤓</button>
     </div>
+  
+     
     <script>
+      function numbers (){
+          let T =document.getElementById("m").innerHTML=Math.floor(Math.random() * 1000);
+
+         if(T %2 == 0){
+
+         document.getElementById(`numberType`).innerText=`زوجي`}
+
+         else{
+          document.getElementById(`numberType`).innerText=`فردي`}
+
+          
+        }
+
+      
+        // Math.floor(Math.random() * 1000)
+      
       // قم بإنشاء الدالة هنا
       // numberType << idقم بإظهار النتيجة النهائية باستخدام ال
       // لا تنسى مناداة الدالة عند الضغط على الزر
